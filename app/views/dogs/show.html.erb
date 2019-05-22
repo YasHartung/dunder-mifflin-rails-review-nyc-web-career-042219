@@ -1,0 +1,16 @@
+<h1>Dog Show Page</h1>
+
+<h3>Dog's Name: <%=@dog.name%></h3> <br>
+<h3>Dog's Breed: <%=@dog.breed%></h3> <br>
+<h3>Dog's Age: <%=@dog.age%></h3> <br>
+
+<h3>Dog's Owners: </h3>
+<ul>
+<%@owners.each do |o|%>
+    <li><%= link_to "#{o.full_name} aka #{o.alias}", employee_path(o.id) %></li>
+<% end %>
+<%=%>
+</ul>
+
+
+

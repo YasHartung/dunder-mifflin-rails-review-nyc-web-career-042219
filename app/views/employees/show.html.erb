@@ -1,0 +1,14 @@
+<h1>Employee Page</h1>
+
+<h3>Employee's Name: <%=@employee.full_name%></h3>
+<h3>Employee's Alias: <%=@employee.alias%></h3>
+
+<h3>Employee's Title: <%=@employee.title%></h3>
+
+<h3>Employee's Office: <%=@employee.office%></h3>
+<h3>Employee's Dog: <%= link_to "#{@employee.dog.name}", dog_path(@employee.dog.id) %></h3>
+
+<%= image_tag("#{@employee.img_url}",  alt: "like", class: "like_image_for_index") %>
+
+<%=button_to "Edit Employee", "/employees/#{@employee.id}/edit", method: :get%> <br>
+<%= button_to "Employee Index", "/employees", method: :get%>
